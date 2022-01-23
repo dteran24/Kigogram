@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Kigo's Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="fixedHeader">
+            <ul>
+                <li>Kigogram</li>
+                <li><i class="far fa-plus-square"></i></li>
+                <li><i class="far fa-heart"></i></li>
+                <li><i class="far fa-envelope"></i></li>
+            </ul>
+        </div>
+        <!----------------------------First Post-->
+        <div class="header">
+            <div class="profilePic"><img src="./Pictures/cat.jpg"></div>
+            <div class="subheading">
+                <div class="user"><span class="bold">CoolCat23</span></div>
+                <div class="location">Houston, Tx</div>
+        </div>
+
+        </div>
+        <div class="carousel" data-carousel>
+            <button class="carousel-button prev" data-carousel-button="prev"><i class="fas fa-chevron-circle-left"></i></button>
+            <button class="carousel-button next" data-carousel-button="next"><i class="fas fa-chevron-circle-right"></i></button>
+            <div class="notification">Post Saved!<i class="fas fa-check"></i></div>
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img class="image" src="./Pictures/img1.jpeg" alt="cat1">
+                </li>
+                <li class="slide">
+                    <img class="image" src="./Pictures/img2.jpeg" alt="cat2">
+                </li>
+                <li class="slide">
+                    <img class="image" src="./Pictures/img3.jpeg" alt="cat3">
+                </li>
+            </ul>
+                
+        </div>
+        <div class="buttons">
+            <ul class="paddingbelowImage">
+                <li><i id="heart" data-heart class="far fa-heart"></i></li>
+                <li><i id="comment" onclick="focusComment()" class="far fa-comment"></i></li>
+                <li><i class="far fa-paper-plane"></i></li>
+                <li><i id= "bookmarkIcon" class="far fa-bookmark"></i></li>
+            </ul>
+        </div>
+            <div class="paddingbelowImage">
+                <div class ="likedBy paddingbelowImage" id="likes"><span>Liked by <span class="bold">Daniel</span><span id="counter" data-counter></span></span></div>
+                <div class="caption paddingbelowImage"><span class="bold">CoolCat23</span> <span>Im a crazy cat</span></div>
+                <div class="comments paddingbelowImage" onclick="displayComments()"><span id="numComments">View all 3 comments</span> </div></a>
+            </div>
+            <div class="commentSection">
+                <ul id = "myComments">
+                    <li>
+                        <div   id = "pic" class="profilepicComments profilePic alignComments"><img src="./Pictures/No-Instagram-Profile-Pic.jpg"/></div>
+                        <div   class="usernameComments bold alignComments">TomRiddles</div>
+                        <div   class="userComments alignComments">Looking Cool!</div>
+                    </li>
+                    <li>
+                        <div class="profilepicComments profilePic alignComments"><img src="./Pictures/No-Instagram-Profile-Pic.jpg"/></div>
+                        <div class="usernameComments bold alignComments">Megan_sd</div>
+                        <div class="userComments alignComments">Great Photos!</div>
+                    </li>
+                    <li>
+                        <div class="profilepicComments profilePic alignComments"><img src="./Pictures/No-Instagram-Profile-Pic.jpg"/></div>
+                        <div class="usernameComments bold alignComments">Jennife_Kep23</div>
+                        <div class="userComments alignComments">Last pic is scary!</div>
+                    </li>
+                </ul>
+                <form id="form" onsubmit="onSubmit()">
+                    <input id="userInput" type="text" placeholder="Comment..." required/>
+                    <button><i class="far fa-arrow-alt-circle-right" id="commentSubmit" ></i></button>
+                    
+                </form>    
+            </div>
+    </div>
+</body>
+<footer><script src="./script.js"></script></footer>
+</html>

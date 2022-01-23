@@ -1,0 +1,229 @@
+body {
+    padding: 0;
+    margin: 0;
+    background:beige;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    background-color: white;
+}
+.fixedHeader{
+    top: 0;
+    position: sticky;
+    background-color: white;
+    z-index: 2;
+}
+.fixedHeader > ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: .3em;
+    margin: .5em;
+}
+.fixedHeader > ul >li:nth-child(1){
+    margin-right: auto;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+}
+
+.fixedHeader > ul > li{
+    padding-right: 1em;
+    font-size: 1.5rem;
+}
+.fixedHeader > ul > li > i{
+    vertical-align: bottom;
+
+}
+.header{
+    background: white;
+    display: flex;
+    height: 3rem;
+    padding: .5em;
+}
+.profilePic > img{
+    max-width: 100%;
+    border-radius: 50%;
+    max-height: 100%;
+    padding-right: .5em;
+    
+}
+
+.imageSection > img{
+    max-width: 100%;
+}
+
+.buttons{
+    padding:.3em;
+    max-width: 100%;
+}
+.buttons > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0;
+}
+.buttons > ul > li{
+    padding-right: 1em;
+    font-size: 1.5rem;
+    
+}
+.buttons > ul > li:nth-child(4){
+    margin-left: auto;
+    padding-right: .3em;
+}
+#heart:hover{
+    color: red;
+}
+.fa-comment:hover{
+    color: rgb(49, 115, 201);
+}
+
+.bold{
+    font-weight:600;
+}
+.paddingbelowImage{
+    padding: .1em .8em;
+}
+.likedBy{
+    text-align: left;
+}
+
+.comments{
+color: rgb(156, 150, 150);
+}
+#numComments:hover{
+    cursor: pointer;
+}
+.commentSection{
+    display: none;
+    max-height: 20vw;
+    overflow-y: auto;
+
+}
+.commentSection ul{
+    list-style: none;
+    padding-left: 1rem;
+}
+.commentSection li{
+    padding-bottom: 1rem;
+    
+}
+.alignComments{
+    display: inline-block;
+    vertical-align: middle;
+}
+.profilepicComments{
+height: 2.5rem;
+
+}
+.profilepicComments img{
+    padding: 0;
+    
+}
+#form{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+#userInput{
+    width: 70%;
+    border-style: none;
+    border-radius: 5px;
+    padding: 1em;
+}
+#userInput:focus{
+    outline: none;
+}
+form > button{
+    background-color: inherit;
+    border: none;
+    font-size: 1.5rem;
+}
+form > button:hover{
+    cursor: pointer;
+    color: rgb(51, 161, 51);
+}
+.carousel{
+    position: relative;
+}
+.slide{
+    display: none;
+    
+}
+.carousel-button{
+    opacity: .3;
+    z-index: 0;
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
+}
+.carousel-button:hover{
+    color: white;
+    opacity: .8;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.carousel-button.prev{
+    left: 1rem;
+}
+.carousel-button.next{
+    right: 1rem;
+}
+
+.slide[data-active]{
+    display: block;
+}
+.carousel ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.carousel li > img{
+    max-width: 100%;
+}
+#bookmarkIcon,#heart,#comment:hover{
+    cursor: pointer;
+}
+#bookmarkIcon:hover{
+    color: rgb(185, 131, 30);
+}
+.notification{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    max-width: 60%;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: rgba(0, 0, 0, .3);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.visible{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 500px){
+    .container{
+        width: 100vw;
+    }
+}
